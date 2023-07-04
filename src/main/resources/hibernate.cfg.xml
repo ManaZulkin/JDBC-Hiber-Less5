@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate?serverTimezone=UTC</property>
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">2319A1923b12</property>
+
+    <!-- DB schema will be updated if needed -->
+    <property name="show_sql">true</property>
+    <property name="hbm2ddl.auto">create</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="org.ex_002_insert_and_update.entity.Author2"/>
+    <mapping class="org.ex_002_insert_and_update.entity.Book2"/>
+  </session-factory>
+</hibernate-configuration>
